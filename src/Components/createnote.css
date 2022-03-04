@@ -1,0 +1,37 @@
+/* .bg{
+    color:honeydew;
+    background-image: url(../Images/createnotebg.jpg);
+    background-size: cover;
+    
+    height:100vh;
+}
+.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100%;
+} */
+.bg{
+    overflow-y: hidden;
+    height: 100vh;
+}
+.card{
+    color:honeydew;
+    background-image: url(../Images/createnotebg.jpg);
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+}
+.card input,textarea{
+    background-color: whitesmoke;
+    box-shadow: purple 6px 6px 3px;
+    border-radius: 10px;
+    opacity: 90%;
+}
+textarea{
+    padding: 10px;
+}

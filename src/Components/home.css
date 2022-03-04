@@ -1,0 +1,34 @@
+.home{
+    background-image: url('../Images/homebg.jfif');
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    overflow-y: hidden;
+}
+.home h1{
+    font-size: 60px;
+}
+.home button{
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    margin: 0 10px;
+    background-color: aqua;
+}
+.home button:hover{
+    background-color: blue;
+    color: white;
+}
+.home h1{
+    text-align: center;
+    background-color: #a9a9a985;
+    padding: 10px;
+    border-radius: 10px;
+}
+.abc{
+    height:100vh;
+    overflow-y: hidden;
+}
