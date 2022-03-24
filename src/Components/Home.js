@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
-import './home.css'
+import '../CSS/home.css'
 
 export default function Home() {
     const login = () => {

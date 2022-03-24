@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './card.css';
+import '../CSS/card.css';
 
 export default function Card(props) {
     const del = async () => {

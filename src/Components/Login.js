@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import './login.css'
+import '../CSS/login.css'
 import Navbar from './Navbar';
 
 export default function Login() {

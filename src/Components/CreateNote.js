@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import { useHistory, useLocation } from 'react-router'; //this has been updated 
 import { Link } from 'react-router-dom';
-import './createnote.css'
+import '../CSS/createnote.css'
 import Navbar from './Navbar';
 
 export default function CreateNote() {
