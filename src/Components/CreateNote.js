@@ -9,6 +9,8 @@ export default function CreateNote() {
     const history = useHistory();
     var err=0;
     try{
+        // console.log("dat = ",location.state.username)
+        // console.log("dat = ",location.state.password)
         var username = location.state.username;
         var password = location.state.password;
     }

@@ -11,9 +11,10 @@ export default function SavedNote() {
     var err = 0;
     try {
         var username = location.state.username;
-
+        console.log("username",username)
     } catch (error) {
         err = 1;
+        console.log(error)
     }
     const add = () => {
             var info = location.state;
@@ -24,18 +25,24 @@ export default function SavedNote() {
     }
     const [notes, setNotes] = useState([]);
     useEffect(async () => {
-        if (err = 0) {
+        console.log(err);
+        if (err == 0) {
             var info = location.state;
-            console.log("info", info);
+            console.log("info");
             var data = await fetch(`/api/savednote/${info.username}/${info.password}`);
             var parsedData = await data.json();
             console.log(parsedData);
             setNotes(parsedData);
+            console.log("notes = ",notes)
+        }
+        else
+        {
+            console.log("err");
         }
     }, []);
 
     if (err)
-        return(<><h1 className="text-center">PLease <Link to="/login">login</Link> and try again</h1></>)
+        return(<><h1 className="text-center">Please <Link to="/login">login</Link> and try again</h1></>)
 
     return (
         <>
