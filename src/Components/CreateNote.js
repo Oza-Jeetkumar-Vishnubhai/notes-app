@@ -1,10 +1,21 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
 import { useHistory, useLocation } from 'react-router'; //this has been updated 
 import { Link } from 'react-router-dom';
 import '../CSS/createnote.css'
 import Navbar from './Navbar';
 
 export default function CreateNote() {
+
+    const verifyToken = async()=>{
+        const data = await fetch('/verify');
+        const parsedData = await data.json();
+        console.log(parsedData);
+    }
+    useEffect(()=>{
+        verifyToken();
+    },[]);
+    
+
     const location = useLocation();
     const history = useHistory();
     var err=0;
