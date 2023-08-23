@@ -15,7 +15,7 @@ const userSchema = Schema({
 userSchema.methods.createAuthToken=async function(){
     const user=this;
     console.log("creating token");
-    const token=jwt.sign({_id:user._id.toString()},"jeetoza");
+    const token=jwt.sign({_id:user._id.toString()},process.env.JWT_SECRETE);
     console.log(token);
     user.tokens=user.tokens.concat({token:token});//.concat combines two or more array
     console.log(user);

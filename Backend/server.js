@@ -5,7 +5,6 @@ const mdb = require('./db');
 const Users = require('./schema');
 const Notes = require('./noteSchema');
 const bp = require('body-parser');
-const auth = require('./auth')
 const cookieParser = require("cookie-parser");
 const jwt=require('jsonwebtoken');
 
@@ -24,7 +23,7 @@ app.get('/',(req,res)=>{
 app.get('/verify',async (req,res)=>{
     try {
         const token =req.cookies.jwt;
-        const decode=jwt.verify(token,"jeetoza");
+        const decode=jwt.verify(token,JWT_SECRETE);
         const user=await Users.findOne({_id:decode._id,'tokens.token':token});
         if(!user){
             throw new Error();
